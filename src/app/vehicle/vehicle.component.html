@@ -1,0 +1,37 @@
+<p>vehicle works!</p>
+
+<input type="text" placeholder="search" (keypress)="getfilteredvehicle()" [(ngModel)]="term">
+
+<table>
+    <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>manufacturer </th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>image </th>
+            <th>ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Vehicle of Vehicles ">
+            
+
+            <td>{{Vehicle.Vehicle}}</td>
+            <td>{{Vehicle.manufacturer}}</td>
+            <td>{{Vehicle.model}}</td>
+            <td>{{Vehicle.type}}</td>
+            <td>{{Vehicle.fuel}}</td>
+            <td>{{Vehicle.color}}</td>
+            <td>
+                <img src="{{Vehicle.image}}" alt="">
+            </td>
+            <td>{{Vehicle.ID}}</td>
+            
+
+        </tr>
+    </tbody>
+   </table>
+

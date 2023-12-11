@@ -1,0 +1,9 @@
+<h1>Event Registration</h1>
+<input type="text" [(ngModel)]="anu">
+
+<button (click)="submit()">submit</button>
+<h3>registed users</h3>
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+</ol>
+<button *ngIf="names.length>0" (click)="delete()">delete</button>

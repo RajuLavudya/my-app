@@ -1,0 +1,16 @@
+.parent{
+    width: 100vh;
+    height: 100vw;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    background-color: azure;
+    padding: 20px;
+    text-align: center;
+}
+button{
+    margin-top: 20px;
+}
