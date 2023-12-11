@@ -20,6 +20,7 @@ import { UserinfoComponent } from './userinfo/userinfo.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { NotifyGuard } from './notify.guard';
 const routes: Routes = [
     {path:'',component:LoginComponent},
     {path:'login',component:LoginComponent},
@@ -38,7 +39,7 @@ const routes: Routes = [
         {path:'create',component:CreateUserComponent},
         {path:'bank',component:BankComponent},
         {path:'userinfo',component:UserinfoComponent},
-        {path:'user-form',component:UserFormComponent}
+        {path:'user-form', canDeactivate:[NotifyGuard], component:UserFormComponent}
         
     ]},
      {path:'**',component:PagenotfoundComponent}
